@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<!-- saved from url=(0163)https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/5d913fb77962ecf7b30ecff650e43fba/182e3beb-a3b8-4c7e-a39b-0320fc995172/canvas-app/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khandelwal Marketing - Authorized Cement Distributor</title>
+    <style>
+        :root {
+            --navy: #0f3460;
+            --gold: #d4af37;
+            --light-gold: #f0e68c;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--navy) 0%, #1a5490 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section h1 {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .logo-section p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--gold);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 20px;
+        }
+
+        /* Section */
+        .section {
+            background: var(--white);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--gold);
+            font-size: 1.8rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #1a5490 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .hero h2 {
+            color: var(--gold);
+            border: none;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: var(--white);
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Brand Logos */
+        .brand-logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .brand-logo {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .brand-logo img {
+            max-width: 100%;
+            height: auto;
+            max-height: 150px;
+            object-fit: contain;
+        }
+
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateX(5px);
+        }
+
+        .card h3 {
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, var(--navy) 0%, #1a5490 100%);
+            color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .contact-card a {
+            color: var(--light-gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-card a:hover {
+            color: var(--gold);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <h1>KHANDELWAL MARKETING</h1>
+                <p>Authorized Distributor - Ambuja, ACC &amp; Adani Cement</p>
+            </div>
+            <div>
+                <p><strong>Balotra, Rajasthan</strong></p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/5d913fb77962ecf7b30ecff650e43fba/182e3beb-a3b8-4c7e-a39b-0320fc995172/canvas-app/index.html#about">About Us</a></li>
+            <li><a href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/5d913fb77962ecf7b30ecff650e43fba/182e3beb-a3b8-4c7e-a39b-0320fc995172/canvas-app/index.html#brands">Our Brands</a></li>
+            <li><a href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/5d913fb77962ecf7b30ecff650e43fba/182e3beb-a3b8-4c7e-a39b-0320fc995172/canvas-app/index.html#projects">Projects</a></li>
+            <li><a href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/5d913fb77962ecf7b30ecff650e43fba/182e3beb-a3b8-4c7e-a39b-0320fc995172/canvas-app/index.html#leadership">Leadership</a></li>
+            <li><a href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/5d913fb77962ecf7b30ecff650e43fba/182e3beb-a3b8-4c7e-a39b-0320fc995172/canvas-app/index.html#gallery">Gallery</a></li>
+            <li><a href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/5d913fb77962ecf7b30ecff650e43fba/182e3beb-a3b8-4c7e-a39b-0320fc995172/canvas-app/index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h2>Building Rajasthan's Future</h2>
+            <p>Over 20 years of excellence in cement distribution</p>
+            <p>Serving Balotra and surrounding districts with quality construction materials</p>
+        </div>
+
+        <section id="about" class="section">
+            <h2>About Khandelwal Marketing</h2>
+            <p>Khandelwal Marketing is the authorized distributor of India's leading cement brands - <strong>Ambuja Cement, ACC Cement, and Adani Cement</strong> - serving Balotra and surrounding districts in Rajasthan for over 20 years.</p>
+            <p style="margin-top: 1rem;">Founded by <strong>Mukesh Khandelwal</strong> and led by CEO <strong>Dinesh Mali</strong>, we have successfully completed major infrastructure projects across Rajasthan. Our commitment to quality, timely delivery, and customer satisfaction has made us the trusted partner for builders, contractors, and homeowners.</p>
+            
+            <div class="cards-grid" style="margin-top: 2rem;">
+                <div class="card">
+                    <h3>🏆 20+ Years Experience</h3>
+                    <p>Two decades of serving the construction industry</p>
+                </div>
+                <div class="card">
+                    <h3>🏗️ Major Projects</h3>
+                    <p>Infrastructure development across Rajasthan</p>
+                </div>
+                <div class="card">
+                    <h3>✓ Quality Assured</h3>
+                    <p>Authorized distributor of premium brands</p>
+                </div>
+                <div class="card">
+                    <h3>⚡ Timely Delivery</h3>
+                    <p>Efficient logistics and distribution network</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="brands" class="section">
+            <h2>Our Premium Brands</h2>
+            <div class="brand-logos">
+                <div class="brand-logo">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/3d071f07-d40d-42c3-87a0-89fc68af8f58" alt="Ambuja Cement - Giant Compressive Strength">
+                </div>
+                <div class="brand-logo">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/12644270-e18c-427f-b49b-800b1865d6b1" alt="Ambuja Cement Products">
+                </div>
+            </div>
+            <p style="margin-top: 1.5rem; text-align: center;">We are proud authorized distributors of Ambuja, ACC, and Adani Cement - India's most trusted cement brands known for superior quality and strength.</p>
+        </section>
+
+        <section id="leadership" class="section">
+            <h2>Leadership &amp; Team</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/36826cda-6a0c-4593-b396-8ab219173dff" alt="Dinesh Mali - CEO" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                    <h3>Dinesh Mali</h3>
+                    <p><strong>CEO &amp; Managing Director</strong></p>
+                    <p style="margin-top: 0.5rem;">Leading Khandelwal Marketing with vision and expertise in Advisory, Infratech, and Engineering</p>
+                </div>
+                <div class="card">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/85310c0e-c644-4cb8-be1d-86ba44d4f75c" alt="Professional Team" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                    <h3>Experienced Team</h3>
+                    <p>Our dedicated professionals at Adani cement facility ensuring quality and service excellence</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Our Network &amp; Projects</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/3df5e74d-2c2a-4353-830f-7d2f2cca96e8" alt="Retail Outlets Balotra">
+                    <div class="gallery-caption">Modern retail network across Balotra</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/b6191081-dc05-4d62-a808-dd0283d88763" alt="Distribution Center">
+                    <div class="gallery-caption">State-of-the-art distribution facilities</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/01e9fe62-f717-4123-b3ff-efc612987f55" alt="Contractor Meeting">
+                    <div class="gallery-caption">Building strong relationships with contractors</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2>Our Infrastructure</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/1e42b736-b8a6-44fd-b2b1-0ebc3be00aed" alt="Depot 1">
+                    <div class="gallery-caption">Primary depot - Balotra</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/aaf5520a-7eba-4892-bbf5-8301437e7b84" alt="Depot 2">
+                    <div class="gallery-caption">Distribution hub with modern facilities</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/ca8f7693-0cb3-4b02-a368-9a6d6fc9572e" alt="Storage Facility">
+                    <div class="gallery-caption">Spacious storage and logistics center</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/08dff636-673c-4dc8-979b-db6a216fdf6a" alt="Retail Shop">
+                    <div class="gallery-caption">Customer service retail outlet</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./Khandelwal Marketing - Authorized Cement Distributor_files/a16f3b4b-315d-4b16-850e-e5f606515150" alt="Night View">
+                    <div class="gallery-caption">24/7 operations for customer convenience</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3>📞 Phone</h3>
+                    <p><a href="tel:+918347123666">+91 83471 23666</a></p>
+                    <p><a href="tel:+918238123666">+91 82381 23666</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>📍 Location</h3>
+                    <p>Near Cozy Kid's School</p>
+                    <p>Prakash Mali House, Balotra</p>
+                    <p>Rajasthan, India</p>
+                </div>
+                <div class="contact-card">
+                    <h3>💼 Services</h3>
+                    <p>Advisory</p>
+                    <p>Infratech</p>
+                    <p>Engineering</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://wa.me/918347123666" class="whatsapp-btn">💬 WhatsApp Us</a>
+            </div>
+        </section>
+
+        <section class="section" style="background: linear-gradient(135deg, var(--navy) 0%, #1a5490 100%); color: var(--white);">
+            <h2 style="color: var(--gold); border-color: var(--gold);">Why Choose Khandelwal Marketing?</h2>
+            <div class="cards-grid">
+                <div class="card" style="background: rgba(255,255,255,0.1); color: var(--white); border-color: var(--gold);">
+                    <h3 style="color: var(--gold);">✓ Authorized Distribution</h3>
+                    <p>Official partner of Ambuja, ACC, and Adani Cement</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.1); color: var(--white); border-color: var(--gold);">
+                    <h3 style="color: var(--gold);">✓ Proven Track Record</h3>
+                    <p>20+ years of successful project completions</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.1); color: var(--white); border-color: var(--gold);">
+                    <h3 style="color: var(--gold);">✓ Expert Team</h3>
+                    <p>Professional guidance and technical support</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.1); color: var(--white); border-color: var(--gold);">
+                    <h3 style="color: var(--gold);">✓ Customer Focused</h3>
+                    <p>Dedicated to your satisfaction and success</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>KHANDELWAL MARKETING</strong></p>
+        <p>Authorized Distributor - Ambuja, ACC &amp; Adani Cement</p>
+        <p>Near Cozy Kid's School, Prakash Mali House, Balotra, Rajasthan</p>
+        <p>Phone: +91 83471 23666 | +91 82381 23666</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">© 2025 Khandelwal Marketing. All rights reserved.</p>
+    </footer>
+
+
+</body></html>
